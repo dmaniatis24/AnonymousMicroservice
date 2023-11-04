@@ -1,0 +1,732 @@
+{
+	"info": {
+		"_postman_id": "ee3cc302-3f45-4423-9992-6faa3e3956b6",
+		"name": "RAL API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13653669",
+		"_collection_link": "https://planetary-star-509952.postman.co/workspace/Younet-Team~07d4b812-76fb-421a-8367-7b5828c5bfe6/collection/13653669-ee3cc302-3f45-4423-9992-6faa3e3956b6?action=share&source=collection_link&creator=13653669"
+	},
+	"item": [
+		{
+			"name": "API Test",
+			"item": [
+				{
+					"name": "Test API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Host}}/test/api",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"test",
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test API Query",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Host}}/test/query",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"test",
+								"query"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Handler User",
+					"item": [
+						{
+							"name": "Post User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"3333@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}/users/handler/add",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"users",
+										"handler",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\": \"12345\",\r\n    \"hasGroup\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}/users/handler/patch/USR2023102NDK1701",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"users",
+										"handler",
+										"patch",
+										"USR2023102NDK1701"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}/users/handler/delete/USR2023102NDK1701",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"users",
+										"handler",
+										"delete",
+										"USR2023102NDK1701"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Restore User",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": [\"USR2023102NDK1701\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}/users/handler/restore",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"users",
+										"handler",
+										"restore"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Host}}/users",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtering Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Host}}/users/filtering/AGE",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"users",
+								"filtering",
+								"AGE"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Host}}/users/search/gma",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"users",
+								"search",
+								"gma"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Host}}/users/USR2023102CJS1855",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"users",
+								"USR2023102CJS1855"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Registration Progress",
+			"item": [
+				{
+					"name": "Handler User",
+					"item": [
+						{
+							"name": "Post User Registration Progress",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": \"USR2023106BAD1354\"\r\n}\r\n\r\n\r\n//userId\r\n//registrationProgress\r\n//isDone\r\n//dateDone",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}/userRegistrationProgress/handler/add",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"userRegistrationProgress",
+										"handler",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User Registration Progress",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"registrationProgress\": \"1\", // 0 = Initial, 1 = Email Sent Pending, 2 = Register but no Info, 3 = Completed\r\n    \"isDone\": \"0\" // 0 = Pending, 1 = Completed\r\n}\r\n\r\n\r\n//userId\r\n//registrationProgress\r\n//isDone",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}/userRegistrationProgress/handler/patch/USR2023106BAD1354",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"userRegistrationProgress",
+										"handler",
+										"patch",
+										"USR2023106BAD1354"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User Registration Progress",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}/userRegistrationProgress/handler/delete/USR2023106BAD1354",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"userRegistrationProgress",
+										"handler",
+										"delete",
+										"USR2023106BAD1354"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Restore User Registration Progress",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": [\"USR2023106BAD1354\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}/userRegistrationProgress/handler/restore",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"userRegistrationProgress",
+										"handler",
+										"restore"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "All Users User Registration Progress",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Host}}/userRegistrationProgress",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"userRegistrationProgress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Registration Progress",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Host}}/userRegistrationProgress/USR2023102CJS1855",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"userRegistrationProgress",
+								"USR2023102CJS1855"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Group",
+			"item": [
+				{
+					"name": "Handler User Group",
+					"item": [
+						{
+							"name": "Post User Group",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userGroupName\": \"Test Group 6\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}/userGroup/handler/add",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"userGroup",
+										"handler",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User Group",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userGroupName\": \"Test Group 99\",\r\n    \"isActive\": 0\r\n}\r\n\r\n// DB Cols for update\r\n// userGroupName\r\n// isActive",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}/userGroup/handler/patch/USRGROUP2023103TPW1864",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"userGroup",
+										"handler",
+										"patch",
+										"USRGROUP2023103TPW1864"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User Group",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}/userGroup/handler/delete/USRGROUP2023103IZW1453",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"userGroup",
+										"handler",
+										"delete",
+										"USRGROUP2023103IZW1453"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Restore User Group",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userGroupId\": [\"USRGROUP2023103TPW1864\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}/userGroup/handler/restore",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"userGroup",
+										"handler",
+										"restore"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "All Groups",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Host}}/userGroup",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"userGroup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Group",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Host}}/userGroup/111",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"userGroup",
+								"111"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users UserGroup Associate",
+			"item": [
+				{
+					"name": "Handler User UserGroup",
+					"item": [
+						{
+							"name": "Post User UserGroup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userGroupId\": \"USRGROUP2023103IZW1453\",\r\n    \"userId\": \"3333@gmail.com\"\r\n}\r\n\r\n\r\n//userGroupId\r\n//userId",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}/usersUserGroup/handler/add",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"usersUserGroup",
+										"handler",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User UserGroup",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userGroupId\": \"12345\",\r\n    \"userId\": \"12345\",\r\n    \"isDeleted\": \"12345\"\r\n}\r\n\r\n\r\n//userGroupId\r\n//username\r\n//isDeleted",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}/users/handler/patch/1",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"users",
+										"handler",
+										"patch",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User UserGroup",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}/usersUserGroup/handler/delete/1",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"usersUserGroup",
+										"handler",
+										"delete",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Restore User UserGroup",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usersUserGroupId\": [\"USR2023102NDK1701\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Host}}/users/handler/restore",
+									"host": [
+										"{{Host}}"
+									],
+									"path": [
+										"users",
+										"handler",
+										"restore"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "All Users UserGroup",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Host}}/usersUserGroup",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"usersUserGroup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users UserGroup",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Host}}/usersUserGroup/1",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"usersUserGroup",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "Host",
+			"value": "http://localhost:8080/api"
+		}
+	]
+}

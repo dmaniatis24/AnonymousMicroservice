@@ -1,0 +1,21 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const MySql_1 = __importDefault(require("../../infrastructure/utilities/MySql"));
+const Logger_1 = __importDefault(require("../../infrastructure/utilities/Logger"));
+const config_1 = __importDefault(require("../../config"));
+const login_repository_1 = __importDefault(require("./login.repository"));
+const login_service_1 = __importDefault(require("./login.service"));
+const login_controller_1 = __importDefault(require("./login.controller"));
+const AuthUser_1 = require("../../infrastructure/middlewares/auth/AuthUser");
+const mysql = new MySql_1.default({ logger: Logger_1.default, options: config_1.default.db });
+const router = (0, express_1.Router)();
+const repository = new login_repository_1.default({ mysql, logger: Logger_1.default });
+const service = new login_service_1.default({ repository });
+const controller = new login_controller_1.default({ service });
+router.post('/login', controller.login.bind(controller));
+router.post('/logout', AuthUser_1.authenticateMiddleware, controller.logout.bind(controller));
+exports.default = router;

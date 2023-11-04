@@ -1,0 +1,20 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const MySql_1 = __importDefault(require("../../infrastructure/utilities/MySql"));
+const Logger_1 = __importDefault(require("../../infrastructure/utilities/Logger"));
+const config_1 = __importDefault(require("../../config"));
+const email_repository_1 = __importDefault(require("./email.repository"));
+const email_service_1 = __importDefault(require("./email.service"));
+const email_controller_1 = __importDefault(require("./email.controller"));
+const { validate } = require('../../infrastructure/middlewares/validationData/ValidationData');
+const mysql = new MySql_1.default({ logger: Logger_1.default, options: config_1.default.db });
+const router = (0, express_1.Router)();
+const repository = new email_repository_1.default({ mysql, logger: Logger_1.default });
+const service = new email_service_1.default({ repository });
+const controller = new email_controller_1.default({ service });
+router.post('/', controller.post.bind(controller));
+exports.default = router;

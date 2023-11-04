@@ -1,0 +1,65 @@
+{
+  "name": "ralapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.ts",
+    "watch": "nodemon server.ts",
+    "build": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmaniatis24/RALApi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmaniatis24/RALApi/issues"
+  },
+  "homepage": "https://github.com/dmaniatis24/RALApi#readme",
+  "devDependencies": {
+    "@types/body-parser": "^1.19.3",
+    "@types/cookie-parser": "^1.4.4",
+    "@types/cors": "^2.8.14",
+    "@types/express": "^4.17.20",
+    "@types/morgan": "^1.9.6",
+    "@types/node-cron": "^3.0.9",
+    "prettier": "3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@types/aws-sdk": "^2.7.0",
+    "@types/bcrypt": "^5.0.1",
+    "@types/bcryptjs": "^2.4.4",
+    "@types/body-parser": "^1.19.3",
+    "@types/chalk": "^2.2.0",
+    "@types/cookie-parser": "^1.4.4",
+    "@types/cors": "^2.8.14",
+    "@types/debug": "^4.1.9",
+    "@types/dotenv": "^8.2.0",
+    "@types/ejs": "^3.1.3",
+    "@types/express-fileupload": "^1.4.2",
+    "@types/express-validator": "^3.0.0",
+    "@types/http-errors": "^2.0.2",
+    "@types/jsonwebtoken": "^9.0.4",
+    "@types/morgan": "^1.9.6",
+    "@types/node-cron": "^3.0.9",
+    "@types/nodemailer": "^6.4.11",
+    "@types/nodemon": "^1.19.3",
+    "@types/pino": "^7.0.5",
+    "@types/pino-pretty": "^5.0.0",
+    "@types/redis": "^4.0.11",
+    "@types/socket.io": "^3.0.2",
+    "@types/utf8": "^3.0.1",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.6.1",
+    "node-datetime": "^2.1.2",
+    "nodemailer": "^6.9.7"
+  }
+}
